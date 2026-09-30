@@ -6,7 +6,8 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 /**
- * Core Room Database class for THOODHU storing User, Conversation, and Message entities.
+ * Main RoomDatabase for THOODHU persistence layer in 'com.example.data.local'.
+ * Manages the User, Conversation, and Message entities and exposes their DAOs.
  */
 @Database(
     entities = [
@@ -17,20 +18,20 @@ import androidx.room.RoomDatabase
     version = 2,
     exportSchema = false
 )
-abstract class AppDatabase : RoomDatabase() {
+abstract class ThoodhuDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
     abstract fun conversationDao(): ConversationDao
     abstract fun messageDao(): MessageDao
 
     companion object {
         @Volatile
-        private var INSTANCE: AppDatabase? = null
+        private var INSTANCE: ThoodhuDatabase? = null
 
-        fun getInstance(context: Context): AppDatabase {
+        fun getInstance(context: Context): ThoodhuDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    AppDatabase::class.java,
+                    ThoodhuDatabase::class.java,
                     "thoodhu_database.db"
                 )
                 .fallbackToDestructiveMigration()
