@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">THOODHU</string>
+    <string name="app_tagline">Speed. Freedom. Sovereignty.</string>
+    <string name="auth_phone_title">Enter your phone number</string>
+    <string name="auth_phone_desc">THOODHU uses your number to securely verify your account. Your number is never shown publicly without your permission.</string>
+    <string name="auth_otp_title">Verification Code</string>
+    <string name="auth_otp_desc">Enter the 6-digit code sent to your phone</string>
+    <string name="auth_profile_title">Create your profile</string>
+    <string name="nav_chats">Chats</string>
+    <string name="nav_updates">Updates</string>
+    <string name="nav_communities">Communities</string>
+    <string name="nav_calls">Calls</string>
+    <string name="nav_settings">Settings</string>
+</resources>

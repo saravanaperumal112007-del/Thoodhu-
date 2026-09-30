@@ -1,0 +1,6 @@
+{
+  "name": "THOODHU",
+  "description": "Secure, modern messaging platform inspired by the swift eagle delivering messages with speed, freedom, and privacy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
